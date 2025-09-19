@@ -1,0 +1,57 @@
+title: Restaurant Block Theme
+base: themes/restaurant-block
+
+docs:
+  - title: User Guide
+    page: user
+
+user:
+  - title: Getting Started
+    page: user
+    flags: getting-started
+    items:
+    - title: Install Theme
+      page: user/getting-started/install
+
+    - title: Recommended Plugins
+      page: user/getting-started/plugins
+
+  - title: Styles
+    page: user/styles
+    flags: styles
+    items:
+    - title: Choose Overall Style
+      page: user/styles
+    - title: Color Palette
+      page: user/styles/color-palette
+
+  - title: Homepage
+    page: user/homepage
+    flags: homepage
+    items:
+    - title: Configure Homepage
+      page: user/homepage
+
+  - title: Translation
+    page: user/translation
+    flags: translation
+    items:
+    - title: WP Community Translation
+      page: user/translation/community
+
+    - title: Language Plugins
+      page: user/translation/plugins
+
+  - title: Support
+    page: user/support
+    flags: support
+    items:
+    - title: Contact Us
+      page: user/support/contact
+
+  - title: Changelog
+    page: user/changelog
+    flags: changelog
+    items:
+    - title: View Changelog
+      page: user/changelog/index

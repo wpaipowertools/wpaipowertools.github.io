@@ -1,0 +1,4 @@
+name: WP AI Power Tools Github Pages w/ Jeckyll
+markdown: kramdown
+plugins:
+  - jekyll-sitemap

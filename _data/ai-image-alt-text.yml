@@ -1,0 +1,84 @@
+title: AI Image Alt Text
+base: plugins/ai-image-alt-text
+
+docs:
+  - title: User Guide
+    page: user
+
+user:
+  - title: Getting Started
+    page: user
+    flags: getting-started
+    items:
+    - title: Install Plugin
+      page: user/getting-started/install
+
+  - title: OpenAI Key
+    page: user/openai-key
+    flags: openai-key
+    items:
+    - title: Getting your API key
+      page: user/openai-key/get-key
+
+    - title: Add Key in Plugin
+      page: user/openai-key/adding-key
+
+  - title: Generating Alt Text 
+    page: user/alt-text
+    flags: alt-text
+    items:
+    - title: Media Library
+      page: user/alt-text/media-library
+
+    - title: Bulk and Scheduled Generation (Pro)
+      page: user/alt-text/bulk
+
+    - title: Context Aware (Pro)
+      page: user/alt-text/context-aware
+
+    - title: WooCommerce (Pro)
+      page: user/alt-text/woocommerce
+
+  - title: Pro Version 
+    page: user/pro
+    flags: pro
+    items:
+    - title: Benefits of Pro
+      page: user/pro/benefits
+
+    - title: How to Purchase
+      page: user/pro/purchase
+
+    - title: Activate Pro
+      page: user/pro/activate
+
+  - title: Translating
+    page: user/translating
+    flags: translating
+    items:
+    - title: Translating
+      page: user/translating/index
+
+  - title: Support
+    page: user/support
+    flags: support
+    items:
+    - title: Contact Us
+      page: user/support/index
+
+  - title: FAQ
+    page: user/faq
+    flags: faq
+    items:
+    - title: Do I need an OpenAI API key?
+      page: user/faq#openai-key
+    - title: Will it overwrite existing alt text?
+      page: user/faq#overwrite
+    - title: Is the generated alt text accessible?
+      page: user/faq#accessible
+    - title: Does this work with WooCommerce or Elementor?
+      page: user/faq#woo
+    - title: Can I regenerate alt text for all images at once?
+      page: user/faq#bulk
+    - title: How do I contact support?
+      page: user/faq#support
