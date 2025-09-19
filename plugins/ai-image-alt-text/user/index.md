@@ -7,10 +7,9 @@ title: AI Image Alt Text User Guide
 This user guide provides documentation for the AI Image Alt Text plugin. It covers the following topics:
 
 - [Installing the plugin](getting-started/install)
-- [Contact Card](contact-card)
-- [Multiple Locations](multiple-locations)
+- [OpenAI Key](openai-key)
+- [Generating Alt Text](alt-text)
 - [Pro Version](pro)
-- [Settings](settings)
 - [Translating](translating)
 - [Support](support)
 
