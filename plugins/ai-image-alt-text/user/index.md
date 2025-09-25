@@ -10,6 +10,7 @@ This user guide provides documentation for the AI Image Alt Text plugin. It cove
 - [OpenAI Key](openai-key)
 - [Generating Alt Text](alt-text)
 - [Pro Version](pro)
+- [Settings](settings)
 - [Translating](translating)
 - [Support](support)
 

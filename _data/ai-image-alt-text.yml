@@ -52,6 +52,19 @@ user:
     - title: Activate Pro
       page: user/pro/activate
 
+  - title: Settings 
+    page: user/settings
+    flags: settings
+    items:
+    - title: SEO Score
+      page: user/settings/seo-score
+
+    - title: Analytics
+      page: user/settings/analytics
+
+    - title: Logs
+      page: user/settings/logs
+
   - title: Translating
     page: user/translating
     flags: translating
