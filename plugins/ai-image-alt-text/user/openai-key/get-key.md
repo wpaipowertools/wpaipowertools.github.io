@@ -6,6 +6,8 @@ title: OpenAI Key
 ---
 Here we cover how to create an OpenAI account and generate an API key, which is necessary to run the alt text generation in the plugin.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/he-9bXqHS20?si=DI3QzTexn2jDWGJx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## Step 1: Create an OpenAI Account
 
 1. Go to the official OpenAI website: [https://platform.openai.com](https://platform.openai.com)
