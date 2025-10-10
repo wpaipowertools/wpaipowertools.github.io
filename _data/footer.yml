@@ -2,9 +2,6 @@ plugins:
   - title: AI Image Alt Text
     page: ai-image-alt-text
 
-  - title: AI-Powered SEO Suggestions
-    page: ai-powered-seo-suggestions
-
 themes:
   - title: Restaurant Block Theme
     page: restaurant-block
