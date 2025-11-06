@@ -1,0 +1,113 @@
+title: AI Image Alt Text
+base: plugins/ai-powered-seo-suggestions
+
+docs:
+  - title: User Guide
+    page: user
+
+user:
+  - title: Getting Started
+    page: user
+    flags: getting-started
+    items:
+    - title: Install Plugin
+      page: user/getting-started/install
+
+  - title: OpenAI Key
+    page: user/openai-key
+    flags: openai-key
+    items:
+    - title: Getting your API key
+      page: user/openai-key/get-key
+
+    - title: Add Key in Plugin
+      page: user/openai-key/adding-key
+
+  - title: Prerequisites
+    page: user/prerequisites
+    flags: prerequisites
+    items:
+    - title: Third-Party SEO Plugin
+      page: user/prerequisites/index
+
+  - title: SEO Suggestions 
+    page: user/seo-suggestions
+    flags: seo-suggestions
+    items:
+    - title: SEO Suggestions
+      page: user/seo-suggestions/seo-suggestions
+
+    - title: Meta Titles and Descriptions
+      page: user/seo-suggestions/meta
+
+  - title: Pro Version 
+    page: user/pro
+    flags: pro
+    items:
+    - title: Benefits of Pro
+      page: user/pro/benefits
+
+    - title: How to Purchase
+      page: user/pro/purchase
+
+    - title: Activate Pro
+      page: user/pro/activate
+
+  - title: Schema Markup Assistant
+    page: user/schema
+    flags: schema
+    items:
+    - title: Schema Markup Assistant
+      page: user/schema/index
+
+  - title: WooCommerce
+    page: user/woocommerce
+    flags: woocommerce
+    items:
+    - title: WooCommerce Integration
+      page: user/woocommerce/index
+
+  - title: Settings 
+    page: user/settings
+    flags: settings
+    items:
+    - title: Semantic Keyword Recommendations
+      page: user/settings/keywords
+
+    - title: Bulk & Automation
+      page: user/settings/bulk
+
+  - title: Translating
+    page: user/translating
+    flags: translating
+    items:
+    - title: Translating
+      page: user/translating/index
+
+  - title: Support
+    page: user/support
+    flags: support
+    items:
+    - title: Contact Us
+      page: user/support/index
+
+  - title: FAQ
+    page: user/faq
+    flags: faq
+    items:
+    - title: Do I need an OpenAI API key?
+      page: user/faq#openai-key
+    - title: Will this overwrite my Yoast/Rank Math/SEOPress/AIOSEO fields?
+      page: user/faq#overwrite
+    - title: Is there a free AI feature?
+      page: user/faq#free
+    - title: Does it work with WooCommerce?
+      page: user/faq#woo
+    - title: Will this slow down my site?
+      page: user/faq#slow
+    - title: Is this a replacement for Yoast or Rank Math?
+      page: user/faq#yoast
+    - title: Is the plugin GDPR friendly?
+      page: user/faq#gdpr
+    - title: How do I contact support?
+      page: user/faq#support

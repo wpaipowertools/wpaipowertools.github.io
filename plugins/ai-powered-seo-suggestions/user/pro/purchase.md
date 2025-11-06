@@ -1,14 +1,10 @@
 ---
 layout: default
-slug: ai-image-alt-text
+slug: ai-powered-seo-suggestions
 menu: user
 title: How to Purchase
 ---
-Purchasing and activating the pro version is easy and only takes a few minutes. You can reach the purchase page directly from the plugin dashboard by clicking the link in the **License** tab of the **Settings** page.
-
-![Screenshot of link to the buy the pro version of the plugin](/img/{{ page.slug }}/iat-purchase-1.png)
-
-Alternatively, you can [visit the plugin website](https://www.wpaiplugins.dev/wordpress-image-alt-text-ai-plugin/#prices) and choose the plan you would like.
+Purchasing and activating the pro version is easy and only takes a few minutes. You can reach the purchase page directly from the plugin dashboard by clicking the link in the **License** tab of the **Settings** page or by [visiting the plugin website](https://www.wpaiplugins.dev/wordpress-ai-powered-seo-plugin/#prices) and choosing the plan you would like.
 
 ## License Options
 
