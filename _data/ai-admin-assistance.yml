@@ -1,0 +1,110 @@
+title: AI Admin Assistance
+base: plugins/ai-admin-assistance
+
+docs:
+  - title: User Guide
+    page: user
+
+user:
+  - title: Getting Started
+    page: user
+    flags: getting-started
+    items:
+    - title: Install Plugin
+      page: user/getting-started/install
+
+  - title: OpenAI Key
+    page: user/openai-key
+    flags: openai-key
+    items:
+    - title: Getting your API key
+      page: user/openai-key/get-key
+
+    - title: Add Key in Plugin
+      page: user/openai-key/adding-key
+
+  - title: Admin Assistance Panel
+    page: user/panel
+    flags: panel
+    items:
+    - title: Enable and Configure
+      page: user/panel/index
+
+  - title: Guidance
+    page: user/guidance
+    flags: guidance
+    items:
+    - title: Add Guidance
+      page: user/guidance/add
+
+    - title: Configure
+      page: user/guidance/configure
+
+  - title: AI Assistant
+    page: user/ask-ai
+    flags: ask-ai
+    items:
+    - title: AI Assistant
+      page: user/ask-ai/index
+
+  - title: Pro Version 
+    page: user/pro
+    flags: pro
+    items:
+    - title: Benefits of Pro
+      page: user/pro/benefits
+
+    - title: How to Purchase
+      page: user/pro/purchase
+
+    - title: Activate Pro
+      page: user/pro/activate
+
+  - title: Workflows
+    page: user/workflows
+    flags: workflows
+    items:
+    - title: Add Workflows
+      page: user/workflows/index
+
+  - title: Import/Export
+    page: user/import-export
+    flags: import-export
+    items:
+    - title: Import/Export
+      page: user/import-export/index
+
+  - title: Settings 
+    page: user/settings
+    flags: settings
+    items:
+    - title: Logs
+      page: user/settings/logs
+
+    - title: Styling Options
+      page: user/settings/styling
+
+  - title: Translating
+    page: user/translating
+    flags: translating
+    items:
+    - title: Translating
+      page: user/translating/index
+
+  - title: Support
+    page: user/support
+    flags: support
+    items:
+    - title: Contact Us
+      page: user/support/index
+
+  - title: FAQ
+    page: user/faq
+    flags: faq
+    items:
+    - title: Do I need an OpenAI API key?
+      page: user/faq#openai-key
+    - title: Can I regenerate alt text for all images at once?
+      page: user/faq#bulk
+    - title: How do I contact support?
+      page: user/faq#support
