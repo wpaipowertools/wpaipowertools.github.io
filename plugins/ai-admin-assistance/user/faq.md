@@ -14,7 +14,7 @@ We've prepared a tutorial on how to create an OpenAI API key [here](openai-key).
 
 ## <a name="support"></a> How do I contact support?
 
-We provide the best support for the free plugin that We're able to provide for free. But there is only so much we're able to do while keeping the business sustainable. Still, we'd encourage you to [post your support request on the official forums](http://wordpress.org/support/plugin/ai-admin-assistance) and we'll help out as best we can.
+We provide the best support for the free plugin that We're able to provide for free. But there is only so much we're able to do while keeping the business sustainable. Still, we'd encourage you to [post your support request on the official forums](http://wordpress.org/support/plugin/ait-ai-admin-assistance) and we'll help out as best we can.
 
 If you are using the pro version of the plugin, please reach out to us via the [support center on our website](https://www.wpaiplugins.dev/contact/).
 

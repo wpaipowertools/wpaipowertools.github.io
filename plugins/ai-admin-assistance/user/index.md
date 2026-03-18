@@ -18,6 +18,6 @@ This user guide provides documentation for the AI Admin Assistance plugin. It co
 - [Translating](translating)
 - [Support](support)
 
-There's also an [FAQ](faq) that answers many of the most common questions. And a [support forum](https://wordpress.org/support/plugin/ai-admin-assistance) for the free plugin.
+There's also an [FAQ](faq) that answers many of the most common questions. And a [support forum](https://wordpress.org/support/plugin/ait-ai-admin-assistance) for the free plugin.
 
 If you need help with the pro version, please use our [support center](https://www.wpaiplugins.dev/contact/).

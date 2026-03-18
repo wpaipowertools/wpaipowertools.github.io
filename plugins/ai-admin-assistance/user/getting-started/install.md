@@ -4,7 +4,7 @@ slug: ai-admin-assistance
 menu: user
 title: Install Plugin
 plugin_title: AI Admin Assistance
-plugin_url: https://wordpress.org/plugins/ai-admin-assistance
+plugin_url: https://wordpress.org/plugins/ait-ai-admin-assistance
 ---
 *If you have not yet installed WordPress, consult the WordPress documentation for more information. You may want to contact your web host for help installing WordPress.*
 
