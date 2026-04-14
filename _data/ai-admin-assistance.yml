@@ -30,6 +30,13 @@ user:
     - title: Enable and Configure
       page: user/panel/index
 
+  - title: AI Assistant
+    page: user/ask-ai
+    flags: ask-ai
+    items:
+    - title: AI Assistant
+      page: user/ask-ai/index
+
   - title: Guidance
     page: user/guidance
     flags: guidance
@@ -40,12 +47,12 @@ user:
     - title: Configure
       page: user/guidance/configure
 
-  - title: AI Assistant
-    page: user/ask-ai
-    flags: ask-ai
+  - title: Plugin/Theme Authors
+    page: user/plugin-theme-authors
+    flags: plugin-theme-authors
     items:
-    - title: AI Assistant
-      page: user/ask-ai/index
+    - title: Setup
+      page: user/plugin-theme-authors/config
 
   - title: Pro Version 
     page: user/pro
