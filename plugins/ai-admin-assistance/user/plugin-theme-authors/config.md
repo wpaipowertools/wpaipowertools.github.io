@@ -12,37 +12,14 @@ In our example below, we have created a class called `mypluginHelper` specifical
 
 This is mostly a matter of preference. Traditionally, if creating a **theme**, you might place such functions in your `functions.php` file. And, if creating a **plugin**, you'd have more flexibility. For organizational reasons, you may want to create a new file for the new class (perhaps in an `includes` folder you may already have). The important thing is that, wherever you place the code, you make sure the class/code is loaded at least on all the admin pages on which you would like to display the panel/help content.
 
-## Check that the AI Admin Assistance plugin is installed and activated
-
-Since our plugin needs to be activated for you to be able to hook into it, we suggest first adding a function that checks to see if our plugin is indeed activated. For example:
-
-```
-private static function aiaa_is_active() {
-
-    if ( defined( 'AIT_AIAA_VERSION' ) ) { return true; }
-
-    if ( class_exists( 'AIT_AIAA_Plugin' ) ) { return true; }
-
-    // As a fallback, if the filter exists, we treat it as active integration point.
-    if ( has_filter( 'ait_aiaa_third_party_information' ) ) { return true; }
-
-    return false;
-}
-```
-
-Since we are including the above example in the class we created for this integration, we created a method in that class.
-
 ## Integration
 
-Next we'll add a function/method that runs if the plugin is activated (i.e. if the above method returns true) and that calls the code where we will create the help content.
+First, add a filter that runs a function where we will create the help content.
 
 ```
 public static function aiaa_add_filter() {
 
-    if ( self::aiaa_is_active() ) {
-
-        add_filter( 'ait_aiaa_third_party_information', array( __CLASS__, 'add_help_to_aiaa' ), 20, 2 );
-    }
+    add_filter( 'ait_aiaa_third_party_information', array( __CLASS__, 'add_help_to_aiaa' ), 20, 2 );
 }
 ```
 
@@ -58,7 +35,6 @@ public static function add_help_to_aiaa( $items, $context ) {
     $items   = is_array( $items ) ? $items : array();
     $context = is_array( $context ) ? $context : array();
 
-    // We only contribute on screens where our own helper would show.
     $screen_id = isset( $context['screen_id'] ) ? (string) $context['screen_id'] : '';
     $post_type = isset( $context['post_type'] ) ? (string) $context['post_type'] : '';
     $taxonomy  = isset( $context['taxonomy'] ) ? (string) $context['taxonomy'] : '';
@@ -67,66 +43,74 @@ public static function add_help_to_aiaa( $items, $context ) {
 
     $page_details = self::get_page_details_for_context( $context );
 
-    // Build AIAA help_links with grouping:
-    // - Tutorials: page-specific items
-    // - General: documentation/support resources
     $tutorial_links = array();
-
     if ( ! empty( $page_details['tutorials'] ) && is_array( $page_details['tutorials'] ) ) {
 
-        foreach ( $page_details['tutorials'] as $tutorial ) {
+      foreach ( $page_details['tutorials'] as $tutorial ) {
 
-            if ( empty( $tutorial['url'] ) || empty( $tutorial['title'] ) ) { continue; }
+        if ( empty( $tutorial['url'] ) || empty( $tutorial['title'] ) ) { continue; }
 
-            $tutorial_links[] = array(
-                'title' => (string) $tutorial['title'],
-                'url'   => (string) $tutorial['url'],
-            );
-        }
+        $tutorial_links[] = array(
+          'title' => (string) $tutorial['title'],
+          'url'   => (string) $tutorial['url'],
+        );
+      }
     }
 
     $general_links = array();
     if ( ! empty( self::$documentation_link ) ) {
-        $general_links[] = array(
-            'title' => __( 'Documentation', 'ultimate-faqs' ),
-            'url'   => self::$documentation_link,
-        );
+      $general_links[] = array(
+        'title' => __( 'Documentation', 'food-and-drink-menu' ),
+        'url'   => self::$documentation_link,
+      );
     }
     if ( ! empty( self::$tutorials_link ) ) {
-        $general_links[] = array(
-            'title' => __( 'YouTube Tutorials', 'ultimate-faqs' ),
-            'url'   => self::$tutorials_link,
-        );
+      $general_links[] = array(
+        'title' => __( 'YouTube Tutorials', 'food-and-drink-menu' ),
+        'url'   => self::$tutorials_link,
+      );
+    }
+    if ( ! empty( self::$faq_link ) ) {
+      $general_links[] = array(
+        'title' => __( 'FAQ', 'food-and-drink-menu' ),
+        'url'   => self::$faq_link,
+      );
+    }
+    if ( ! empty( self::$wp_forum_support_link ) ) {
+      $general_links[] = array(
+        'title' => __( 'WP Forum Support', 'food-and-drink-menu' ),
+        'url'   => self::$wp_forum_support_link,
+      );
     }
     if ( ! empty( self::$support_center_link ) ) {
-        $general_links[] = array(
-            'title' => __( 'Support Center', 'ultimate-faqs' ),
-            'url'   => self::$support_center_link,
-        );
+      $general_links[] = array(
+        'title' => __( 'Support Center', 'food-and-drink-menu' ),
+        'url'   => self::$support_center_link,
+      );
     }
 
     $help_links = array();
-    if ( ! empty( $tutorial_links ) ) { $help_links[ __( 'Tutorials', 'ultimate-faqs' ) ] = $tutorial_links; }
-    if ( ! empty( $general_links ) ) { $help_links[ __( 'General', 'ultimate-faqs' ) ] = $general_links; }
+    if ( ! empty( $tutorial_links ) ) { $help_links[ __( 'Tutorials', 'food-and-drink-menu' ) ] = $tutorial_links; }
+    if ( ! empty( $general_links ) ) { $help_links[ __( 'General', 'food-and-drink-menu' ) ] = $general_links; }
 
     $items[] = array(
-        'id'          => 'ufaq_help',
-        'title'       => __( 'Ultimate FAQs Help', 'ultimate-faqs' ),
-        'description' => ! empty( $page_details['description'] ) ? '<p>' . esc_html( $page_details['description'] ) . '</p>' : '',
-        'help_links'  => $help_links,
-        'source'      => array(
-            'type' => 'plugin',
-            'name' => 'Ultimate FAQs',
-            'slug' => 'ultimate-faqs',
-        ),
-        'target_callback' => array( __CLASS__, 'aiaa_target_callback' ),
-        'priority'        => 20,
-        'capability'      => 'manage_options',
-        'icon'            => 'dashicons-editor-help',
+      'id'              => 'fdm_help',
+      'title'           => __( 'Restaurant Menu Help', 'food-and-drink-menu' ),
+      'description'     => ! empty( $page_details['description'] ) ? '<p>' . esc_html( $page_details['description'] ) . '</p>' : '',
+      'help_links'      => $help_links,
+      'source'          => array(
+        'type' => 'plugin',
+        'name' => 'Five Star Restaurant Menu and Food Ordering',
+        'slug' => 'food-and-drink-menu',
+      ),
+      'target_callback' => array( __CLASS__, 'aiaa_target_callback' ),
+      'priority'        => 20,
+      'capability'      => 'manage_options',
+      'icon'            => 'dashicons-editor-help',
     );
 
     return $items;
-}
+  }
 ```
 
 ## Setting where to show your help content
@@ -154,7 +138,7 @@ private static function aiaa_matches_context( $screen_id, $post_type, $taxonomy 
   }
 ```
 
-You may have also notice that this method and `add_help_to_aiaa` both also reference `aiaa_target_callback`. This last method helps bring everything together. An example of this would be:
+You may have also noticed thast this method and `add_help_to_aiaa` both also reference `aiaa_target_callback`. This last method helps bring everything together. An example of this would be:
 
 ```
 public static function aiaa_target_callback( $context, $item ) {
